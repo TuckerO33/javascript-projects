@@ -6,7 +6,12 @@
 
    /* Here is how
    to have
-   multi-line
-   comments. */
+   */
+
+   //more comments//
+
+   /* featuring
+   ~~multi line~~
+   comments!!*/
 
    console.log("Comments make your code more readable by others.");
