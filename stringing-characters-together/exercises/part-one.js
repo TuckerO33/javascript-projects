@@ -8,3 +8,9 @@ console.log(num.length);
 //Follow up: Print the number of digits in a DECIMAL value (e.g. num = 123.45 has 5 digits but a length of 6).
 
 //Experiment! What if num could be EITHER an integer or a decimal?  Add an if/else statement so your code can handle both cases.
+const school = [
+    ["science", "computer", "art"],
+    ["Jones", "Willoughby", "Rhodes"]
+ ];
+ school[0].push("dance")
+ console.log(school)

@@ -1,2 +1,7 @@
-console.log(typeof Number ("3.2"));
-console.log(Number ("three"));
+let num = 7;
+
+if (num % 2 === 0) {
+    if (num % 2 === 1) {
+        console.log("odd");
+    }
+}

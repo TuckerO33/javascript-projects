@@ -1,4 +1,7 @@
 // Declare and assign the variables below
+const input = require('readline-sync');
+
+let name = input.question("Enter your name: ");
 
 // Use console.log to print the 'typeof' each variable. Print one item per line.
 

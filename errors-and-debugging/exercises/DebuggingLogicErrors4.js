@@ -35,3 +35,7 @@ console.log("launchReady = ", launchReady);
 // } else {
 //    console.log('Launch scrubbed.');
 // }
+
+// Launch Ready should be false because of the insufficent fuel. However the variable got changed back to true after the 
+// second block of code. Will need to make it that both have to be true in order for launchReady
+// to be true.
