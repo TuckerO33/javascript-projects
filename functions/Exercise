@@ -1,0 +1,61 @@
+let size = 10
+width = 8
+height = 4
+
+function makeLine(size) {
+    let line = '';
+    for (let i = 0; i < size; i++) {
+      line += '#';
+    }
+    return line;
+  }
+// console.log(makeLine(size))
+
+function makeSquare(size) {
+    let square = ''
+    for (let i = 0; i < size; i++) {    
+        square += `\n${makeLine(size)}`
+    }
+    return square
+}
+// console.log(makeSquare(size))
+
+function makeRectangle(width, height) {
+    let rect = ""
+    for (let i = 0; i < height; i++) {
+        rect += `\n${makeLine(width)}`
+    }
+    return rect
+
+}
+// console.log(makeRectangle(width, height))
+
+function makeDownwardStairs(height) {
+    let tri = ""
+    for (let i = 0; i < height; i++) {
+        tri += `\n${makeLine(i+1)}`
+    }
+    return tri
+}
+// console.log(makeDownwardStairs(height))
+
+function makeSpaceLine(numSpaces, numChars) {
+    let spaceLine = ""
+    for (let i = 0; i < numSpaces; i++) {
+        spaceLine += " "
+    }  
+    for (let j = 0; j < numChars; j++) {
+        spaceLine += "#"
+    }
+    for (let k = 0; k < numSpaces; k++) {
+        spaceLine += " " 
+    }
+    return spaceLine
+}
+// console.log(makeSpaceLine(0,2))
+
+function makeIsoscelesTriangle(height) {
+    let triangle = ""
+
+
+}
