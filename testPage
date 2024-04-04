@@ -1,9 +1,8 @@
-function reverse(str) {
-    let reversed = '';
+function repeater(str) {
+    let repeated = str + str;
+    console.log(repeated);
+}
 
-    for (let i = 0; i < str.length; i++) {
-        reversed = str[i] + reversed;
-    }
+repeater('Bob');
 
-    return reversed;
-}console.log(reverse("Tucker"))
+
