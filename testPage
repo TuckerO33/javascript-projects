@@ -1,8 +1,13 @@
-
-function addTen(i) {
-    i += 10;
-    return i;
+class House {
+  constructor(address, squareFt, age) {
+    this.address = address;
+    this.squareFt = squareFt;
+    this.age = age;
   }
-  
-  let i = 17;
-  console.log(addTen(i), i);
+  calculatePrice(squareFt, age) {
+    return 1500 * squareFt - age * 0.25;
+  }
+}
+
+home = new House("111 Town Center Lane", 1000, 20)
+console.log(home.calculatePrice(home.squareFt, home.age))
