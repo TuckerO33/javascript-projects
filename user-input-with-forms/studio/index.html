@@ -4,8 +4,34 @@
 	<meta charset="utf-8">
 	<script>
 		// TODO: create a handler
+		function setSearchEngine (){
+			let form = document.getElementById("searchForm");
+			console.log("it works!")
+			let textInput = document.getElementById("textInput");
+			let radioSelector = document.querySelector('input[name=searchengine]:checked');
+		let actions = {
+    		"google": "https://www.google.com/search",
+			"duckDuckGo": "https://www.duckduckgo.com/",
+			"bing": "https://www.bing.com/search",
+			"ask": "https://www.ask.com/web",
+			};
+			try {
+				if (!textInput.value){
+					throw Error('search text must not be empty')
+				} else if (!radioSelector) {
+					throw Error('search engine must be selected')
+				}
+			} catch (error) {
+				event.preventDefault();
+				throw Error(error);
+			}
+		form.setAttribute("action", actions[radioSelector.value])
+
+		}
     window.addEventListener("load", function(){
         // TODO: register the handler
+		let form = document.getElementById("searchForm");
+		form.addEventListener("submit", setSearchEngine);
     });
 	</script>
 </head>
@@ -14,6 +40,12 @@
 
 	<form id="searchForm">
     <!-- TODO: add form elements -->
+	<input type="text" name="q" id="textInput" />
+    <label>Google <input type="radio" value="google" name="searchengine"/></label>
+    <label>Duck Duck Go <input type="radio" value="duckDuckGo" name="searchengine"/></label>
+    <label>Bing <input type="radio" value="bing" name="searchengine"/></label>
+    <label>Ask <input type="radio" value="ask" name="searchengine"/></label>
+	<button value = "Go!" id="submit" >Go!</button>
 	</form>
 
 </body>
